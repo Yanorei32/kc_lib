@@ -1,6 +1,23 @@
 # kclib
 Python kancolle library
 
+## Quick Start
+```Bash
+$ git clone https://github.com/yanorei32/kclib
+$ cd kclib
+$ python
+```
+
+```Python
+>>> from kc_random_server_selector import KCRandomServerSelector
+>>> from kc_path_creator import KCPathCreator
+>>> KCRandomServerSelector.select() + KCPathCreator.create(116, False, 'full', False)
+'http://203.104.209.39/kcs2/resources/ship/full/0116_7213.png'
+>>>
+```
+
+Enjoy!
+
 ## Function refs
 
 ### KCPathCreator
@@ -26,15 +43,4 @@ ret = KCRandomServerSelector.select()
 
 Return random server URL. (example: `'http://203.104.209.39'`)
 
-## Example
-
-```Python
->>> from kc_random_server_selector import KCRandomServerSelector
->>> from kc_path_creator import KCPathCreator
->>> KCRandomServerSelector.select() + KCPathCreator.create(116, False, 'full', False)
-'http://203.104.209.39/kcs2/resources/ship/full/0116_7213.png'
->>>
-```
-
-Enjoy!
 
